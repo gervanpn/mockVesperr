@@ -1,7 +1,18 @@
 /* - All Site */
 body ul {
     margin: 0;
+    padding: 0;
 }
+
+a:hover {
+    color: #5faee3;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* Fonts, styles & colors */
 .font-main {
     font-family: "Open Sans", sans-serif;
 }
@@ -42,24 +53,14 @@ body ul {
     color: #5faee3;
 }
 
-a:hover {
-    color: #5faee3;
-    text-decoration: none;
-}
-
-a {
-    text-decoration: none;
-}
+/* The Grid */
 
 .container {
     display:grid;
-    height: 100vh;
-    width: 100%;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 15% 10% 55% 10% 10%;
     align-content: center;
-    padding-right: 10px;
-    padding-left: 10px;
+    margin: 0 10px 0 10px;
 }
 
 /* - Nav Menu settings and controls */
@@ -99,32 +100,33 @@ h1.logo-text {
 
 .nav-menu .menu ul {
   display: block;
-  visibility: hidden;
   position: absolute;
-  box-shadow: 0px 0px 10px rgba(127, 137, 161, 0.25);
-  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+  left: 25px;
   padding: 10px 0;
-  left: 50px;
-  line-height: 1.5rem;
+  background: #fff;
+  box-shadow: 2px 0 5px 0 #5faee3;
+  transition-delay: .2s;
+  border-radius: 5px;
 }
 
 .nav-menu .menu li {
   min-width: 100px;
   position: relative;
+  margin: 5px 0;
 }
 
 .nav-menu .menu:hover > ul {
+  opacity: 1;
+  top: 100%;
   visibility: visible;
 }
-
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   color: #3498db;
   text-decoration: none;
 }
-
-/* nav-menu .inactive > li > a {
-  color: red;
-} */
 
 .nav-menu .menu ul a {
   padding: 25px 10px;
@@ -148,7 +150,7 @@ h1.logo-text {
   color: #fff;
 }
 
-/* Index Page main body area */
+/* Main Page body styling*/
 .page-index {
   display: flex;
   align-items: center;
@@ -172,8 +174,7 @@ h1.index-title {
 .index-body {
   font-size: 1.5rem;
   font-weight: 500;
-  margin-top: -.75rem;
-  margin-bottom: 5.5rem; /* pushes get started up or down */
+  margin-bottom: 5rem; /* pushes get started up or down */
 }
 
 .btn-start {
@@ -190,11 +191,15 @@ h1.index-title {
 }
 
 .index-img {
-  max-width: 85%;
   justify-content: flex-end;
   grid-column: 4;
   grid-row: 2;
-  padding-left: 5%;
+  margin-left: 5%;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
 }
 
 .bar-img {
@@ -205,12 +210,13 @@ h1.index-title {
   text-align: center;
   align-items: center;
   background-color: #F3F9FD;
-  padding: 50px 0;
+  padding: 50px 0;     /* Thickness of the bar background */
+  margin-top: 50px;    /* pushed down from body */
 }
 
 .bar-img img:hover {
   filter: none;
-  pointer-events: visible;
+  pointer-events: visible; /*shows color pictures */
 }
 
 .img-sp1 {
@@ -249,7 +255,7 @@ h1.index-title {
   filter: grayscale(100);
 }
 
-/* About Us Page */
+/* About Us Page styling*/
 
 .title-line {
   display: flex;
@@ -278,7 +284,7 @@ h1.index-title {
   grid-column: 1/4;
   grid-row: 3/4;
   align: vertical;
-  margin-left: 10%;
+  margin-left: 20%;
   margin-top: 3%;
   max-width: 450px;
 }
@@ -288,6 +294,7 @@ h1.index-title {
   grid-row: 3/4;
   align: vertical;
   margin-right: 10%;
+  margin-left: -10%;
   margin-top: 3%;
   max-width: 450px;
 }
@@ -304,4 +311,20 @@ h1.index-title {
 .check-img {
   max-width: 5%;
   padding-right: 5px;
+}
+
+.count-box {
+display: flex;
+grid-column: 1/7;
+justify-content: space-between;
+}
+
+.cp-images {
+
+}
+
+.count-size {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
 }
