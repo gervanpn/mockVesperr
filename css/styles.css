@@ -54,13 +54,11 @@ a {
 }
 
 /* The Grid */
-
 .container {
     display:grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 15% 10% 55% 10% 10%;
     align-content: center;
-    margin: 0 10px 0 10px;
+    margin: 0 5px 0 5px;
 }
 
 /* - Nav Menu settings and controls */
@@ -270,7 +268,7 @@ h1.index-title {
   font-size: 2.25rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 30px;
 }
 
 .line-img {
@@ -284,19 +282,14 @@ h1.index-title {
   grid-column: 1/4;
   grid-row: 3/4;
   align: vertical;
-  margin-left: 20%;
-  margin-top: 3%;
-  max-width: 450px;
+  margin: 3% 5% 0 15%;
 }
 
 .about-right {
   grid-column: 4/7;
   grid-row: 3/4;
   align: vertical;
-  margin-right: 10%;
-  margin-left: -10%;
-  margin-top: 3%;
-  max-width: 450px;
+  margin: 3% 15% 0 5%;
 }
 
 .about-right p {
@@ -304,27 +297,41 @@ h1.index-title {
 }
 
 .check-imglist {
-  padding: 0;
-  text-align: left;
+  margin: 0;
 }
 
 .check-img {
   max-width: 5%;
-  padding-right: 5px;
+  margin-right: 5px;
 }
 
-.count-box {
-display: flex;
-grid-column: 1/7;
-justify-content: space-between;
+/* Count section */
+.count-box-left {
+grid-row: 5/6;
+width: 100%;
+margin-top: 15%;
 }
 
-.cp-images {
+.count-box-right {
+grid-row: 5/6;
+width: 100%;
+margin-top: 15%;
+}
 
+.icon-size {
+  font-size: 2rem;
+  font-weight: bolder;
+  float: left;
 }
 
 .count-size {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bolder;
-  margin-bottom: 10px;
+  margin: 0 8px 0 0;
+}
+
+.count-body {
+  margin-top: 5px;
+  margin-bottom:25px;
+  max-width: 80%
 }
