@@ -11,14 +11,21 @@
 
   .toggle-nav {
       display: block;
-      grid-column: 1/2;
+      grid-column: 1;
       grid-row: 1;
-      align-self: center;
       justify-self: start;
-      margin-top: 10px;
-      padding-left: 5px;
+      margin-top: 0px;
+      padding-left: 0px;
   }
 
+  .logo-text {
+      grid-column: 1/2;
+      grid-row: 1;
+      justify-self: flex-end;
+      align-self: center;
+      margin-top: -10px;
+      padding-left: 35px;
+  }
 
   .navbar-all {
       margin-left: 65px;
@@ -72,11 +79,11 @@
 
   .toggle-nav {
       display: block;
-      grid-column: 1/2;
+      grid-column: 1;
       grid-row: 1;
       justify-self: start;
-      margin-top: 10px;
-      padding-left: 5px;
+      margin-top: 0px;
+      padding-left: 0px;
   }
 
   .logo-text {
@@ -84,7 +91,7 @@
       grid-row: 1;
       justify-self: flex-end;
       align-self: center;
-      margin-top: -35px;
+      margin-top: -10px;
       padding-left: 35px;
   }
 

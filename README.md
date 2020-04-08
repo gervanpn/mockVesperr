@@ -1,6 +1,8 @@
 # mockVesperr - Gervan Nantel
 School assignment for April 7
 
+https://github.com/gervanpn/mockVesperr
+
 Build a responsive website, using the principles discussed.
 	• A responsive website should include a grid system, media queries, and images that resize.
 		○ Your grid system and media queries should be custom-coded.
