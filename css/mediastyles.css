@@ -1,43 +1,43 @@
 @media only screen and (min-width: 568px) and (max-width: 1200px) {     /* medium size settings */
 
   .nav-menu {
-      display:none;
+    display:none;
   }
 
   .hamburger-btn {
-      display: contents;
-      cursor: pointer;
+    display: contents;
+    cursor: pointer;
   }
 
   .toggle-nav {
-      display: block;
-      grid-column: 1;
-      grid-row: 1;
-      justify-self: start;
-      margin-top: 0px;
-      padding-left: 0px;
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    margin-top: 0px;
+    padding-left: 0px;
   }
 
   .logo-text {
-      grid-column: 1/2;
-      grid-row: 1;
-      justify-self: flex-end;
-      align-self: center;
-      margin-top: -10px;
-      padding-left: 35px;
+    grid-column: 1/2;
+    grid-row: 1;
+    justify-self: flex-end;
+    align-self: center;
+    margin-top: -10px;
+    padding-left: 35px;
   }
 
   .navbar-all {
-      margin-left: 65px;
+    margin-left: 65px;
   }
 
   .get-start-btn {           /* Get Started position in Nav Bar */
-      display: none;
+    display: none;
   }
 
   h1.index-title {
-      font-size: 2rem;
-      margin-bottom: 25%;
+    font-size: 2rem;
+    margin-bottom: 25%;
   }
 
   .index-body {
@@ -69,38 +69,38 @@
 
 @media only screen and (max-width: 567px) {     /* small size settings */
   .nav-menu {
-      display:none;
+    display:none;
   }
 
   .hamburger-btn {
-      display: contents;
-      cursor: pointer;
+    display: contents;
+    cursor: pointer;
   }
 
   .toggle-nav {
-      display: block;
-      grid-column: 1;
-      grid-row: 1;
-      justify-self: start;
-      margin-top: 0px;
-      padding-left: 0px;
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    margin-top: 0px;
+    padding-left: 0px;
   }
 
   .logo-text {
-      grid-column: 1/2;
-      grid-row: 1;
-      justify-self: flex-end;
-      align-self: center;
-      margin-top: -10px;
-      padding-left: 35px;
+    grid-column: 1/2;
+    grid-row: 1;
+    justify-self: flex-end;
+    align-self: center;
+    margin-top: -10px;
+    padding-left: 35px;
   }
 
   .get-start-btn {
-      display: none;
+    display: none;
   }
 
   h1.index-title {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .index-body {
@@ -198,7 +198,7 @@
 
   /* about Us page */
   .page-body {
-    grid-column: 1/2;
+    grid-column: 1/7;
   }
 
   .title-line {
@@ -206,19 +206,19 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
   }
 
   .title-line h2 {
-    font-size: 4rem !important;
-    margin: 0 30px;
+    font-size: 2rem !important;
+    margin: 0 20px;
   }
 
   .line-img {        /* adjusts the title lines on either side of text */
     display:flex;
     height: 25%;
-    padding: 33px 10px 0 10px;
+    padding: 18px 10px 0 10px;
     margin: 0;
   }
 
@@ -258,13 +258,13 @@
   }
 
   .count-box-left {
-  grid-row: 1/7;
-  margin-top: 10%;
+    grid-row: 1/7;
+    margin-top: 10%;
   }
 
   .count-box-right {
-  grid-row: 5/6;
-  margin-top: 10%;
+    grid-row: 5/6;
+    margin-top: 10%;
   }
 
   .icon-size {
@@ -282,31 +282,81 @@
   /* Services Media */
   .sub-format {            /* formatting the subtitle line */
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.25rem;
+    margin-left: 30px;
   }
+
+  .service-page .service-boxes {  /* styling for the boxes */
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 2px 0 5px 0 #5faee3;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  .service-boxes .sb-title {    /* box title settings */
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .service-boxes .sb-descrip {  /* box body text settings */
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 1rem;
+    margin-bottom: 0;
+  }
+
+/* features area */
+.feature-boxes {
+  grid-template-columns: (2, 1fr);
+  margin-right: 2%;       /* spacing between boxes */
+  width: 88%;
+}
+
+.ft-icons {
+  margin-bottom: 15%;
+  padding: 30px;         /* space around the box / background icon area */
+}
+
+.feature-boxes .ft-icons {
+  height: 20%;          /* height of feature boxes */
+}
+
+.feature-boxes .ft-icons i {  /* icon size settings */
+  font-size: 1.75rem;
+  padding-right: 10px;
+}
+
+.feature-boxes .ft-icons h3 {  /* feature text settings */
+  font-size: .9rem;
+  font-weight: 800;
+  line-height: 1;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
 
   .ft-columns {
     width: 100%;    /* width of feature boxes */
   }
 
   .ft-col-1 {
-    grid-column: 1/7;
     grid-row: 3;
-    width: 100%;
   }
 
   .ft-col-2 {
-    grid-column: 2/3;
+    grid-row: 3;
   }
 
   .ft-col-3 {
-    grid-column: 3/4;
+    grid-row: 4;
   }
 
   .ft-col-4 {
-    grid-column: 4/5;
+    grid-row: 4;
   }
-
-
 
 }
