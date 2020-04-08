@@ -15,3 +15,14 @@ function closeSidenav() {
     isSidenavOpen = false;
   }
 }
+
+function contactUsbtn() {
+  let answer = confirm("Thank You for your Interest. Would you like to proceed?");
+
+  if(answer) {
+      alert("Thank You");
+  } else {
+      alert("Another Time.  Thank You for Visiting.");
+    }
+
+}
