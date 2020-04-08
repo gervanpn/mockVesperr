@@ -4,20 +4,26 @@
     <meta charset="utf-8">
     <title>Vesperr</title>
     <link href="css/styles.css" rel="stylesheet">
-    <script src="script.js"></script>
+    <link href="css/mediastyles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,900|Raleway:300,400,500,600,700,800,900|Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="images/icofont/icofont.min.css" rel="stylesheet">
     <link href="images/favicon.icon" rel="icon">
-
   </head>
   <body>
       <div class="container">
-          <div class="nav-box logo-text"> <!-- Index Page Nav Menu-->
+        <div class="navbar-all">  <!-- .nav-menu start -->
+          <div class="toggle-nav " onclick="openSidenav()">
+            <div class="hamburger-btn"><i class="material-icons">menu</i></div>
+          </div>
+          <div class="logo-text"> <!-- Index Page Mini Nav Menu-->
             <h1><a class="font-raleway txt-black-lt font-bold" href="index.html">Vesperr</a></h1>
           </div>
-          <nav class="nav-box nav-menu">
-            <ul class="font-main font-med">
+          <div id="sidenav" class="sidenav font-main">
+            <div class="toggle-nav" onclick="closeSidenav()">
+              <div class="hamburger-btn"><i class="toggle-nav material-icons">menu_open</i></div>
+            </div>
+            <ul>
               <li class=""><a href="Index.html">Home</a></li>
               <li class=""><a href="About.html">About</a></li>
               <li class="active"><a href="Services.html">Services</a></li>
@@ -32,10 +38,31 @@
                 </ul>
               </li>
               <li class="inactive"><a href="Index.html">Contact</a></li>
-              <li class="font-raleway start"><a href="Index.html">Get Started</a></li>
             </ul>
-          </nav> <!-- .nav-menu end -->
-          <div class="title-line font-main"> <!-- Services Page body-->
+          </div>
+          <div class="nav-menu font-main font-med">
+            <ul>
+              <li class=""><a href="Index.html">Home</a></li>
+              <li class=""><a href="About.html">About</a></li>
+              <li class="active"><a href="Services.html">Services</a></li>
+              <li class="inactive"><a href="Index.html">Portfolio</a></li>
+              <li class="inactive"><a href="Index.html">Team</a></li>
+              <li class="inactive"><a href="Index.html">Pricing</a></li>
+              <li class="menu"><a href="">Drop Down</a>
+                <ul class="">
+                  <li class="font-italic"><a href="Features.html">Features</a></li>
+                  <li class="inactive font-italic"><a href="Index.html">Option 2</a></li>
+                  <li class="font-italic"><a a href="Index.html">All-In-One</a></li>
+                </ul>
+              </li>
+              <li class="inactive"><a href="Index.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="get-start-btn">
+            <a class="font-raleway btn-start-top font-bold" href="Index.html">Get Started</a>
+          </div>
+        </div>  <!-- .nav-menu end -->
+          <div class="page-body title-line font-main"> <!-- Services Page body-->
             <img src="images/line-img.png" class="line-img" alt="-">
             <h2>Services</h2>
             <img src="images/line-img.png" class="line-img" alt="-">
@@ -73,5 +100,6 @@
               </div>
             </div>
       </div>
-  </body>
+      <script type="text/javascript" src="script.js"></script>
+    </body>  <!-- Page End -->
 </html>

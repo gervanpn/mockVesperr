@@ -4,17 +4,26 @@
     <meta charset="utf-8">
     <title>Vesperr</title>
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/mediastyles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,900|Raleway:300,400,500,600,700,800,900|Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="images/favicon.icon" rel="icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="images/icofont/icofont.min.css" rel="stylesheet">
+    <link href="images/favicon.icon" rel="icon">
   </head>
   <body>
       <div class="container">
-          <div class="nav-box logo-text"> <!-- Index Page Nav Menu-->
+        <div class="navbar-all">  <!-- .nav-menu start -->
+          <div class="toggle-nav " onclick="openSidenav()">
+            <div class="hamburger-btn"><i class="material-icons">menu</i></div>
+          </div>
+          <div class="logo-text"> <!-- Index Page Mini Nav Menu-->
             <h1><a class="font-raleway txt-black-lt font-bold" href="index.html">Vesperr</a></h1>
           </div>
-          <nav class="nav-box nav-menu">
-            <ul class="font-main font-med">
+          <div id="sidenav" class="sidenav font-main">
+            <div class="toggle-nav" onclick="closeSidenav()">
+              <div class="hamburger-btn"><i class="toggle-nav material-icons">menu_open</i></div>
+            </div>
+            <ul>
               <li class=""><a href="Index.html">Home</a></li>
               <li class="active"><a href="About.html">About</a></li>
               <li class=""><a href="Services.html">Services</a></li>
@@ -29,68 +38,94 @@
                 </ul>
               </li>
               <li class="inactive"><a href="Index.html">Contact</a></li>
-              <li class="font-raleway start"><a href="Index.html">Get Started</a></li>
             </ul>
-          </nav> <!-- .nav-menu end -->
-          <div class="title-line font-main"> <!-- About Page body-->
+          </div>
+          <div class="nav-menu font-main font-med">
+            <ul>
+              <li class=""><a href="Index.html">Home</a></li>
+              <li class="active"><a href="About.html">About</a></li>
+              <li class=""><a href="Services.html">Services</a></li>
+              <li class="inactive"><a href="Index.html">Portfolio</a></li>
+              <li class="inactive"><a href="Index.html">Team</a></li>
+              <li class="inactive"><a href="Index.html">Pricing</a></li>
+              <li class="menu"><a href="">Drop Down</a>
+                <ul class="">
+                  <li class="font-italic"><a href="Features.html">Features</a></li>
+                  <li class="inactive font-italic"><a href="Index.html">Option 2</a></li>
+                  <li class="font-italic"><a a href="Index.html">All-In-One</a></li>
+                </ul>
+              </li>
+              <li class="inactive"><a href="Index.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="get-start-btn">
+            <a class="font-raleway btn-start-top font-bold" href="Index.html">Get Started</a>
+          </div>
+        </div>  <!-- .nav-menu end -->
+        <div class="page-body">  <!-- About Page All Body-->
+          <div class="title-line font-main">  <!-- About Page title section -->
             <img src="images/line-img.png" class="line-img" alt="-">
             <h2>About Us</h2>
             <img src="images/line-img.png" class="line-img" alt="-">
           </div>
-          <div class="about-left font-main">
-            <div class="">
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <div class="check-imglist">
-                  <p><img src="images/check-img.png" class="check-img" alt="-"> Ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                  <p><img src="images/check-img.png" class="check-img" alt="-"> Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                  <p><img src="images/check-img.png" class="check-img" alt="-"> Ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-              </div>
-            </div>
-            <div class="count-box-left ">
-                <div>
-                  <div>
-                    <i class="count-size txt-blue-md icofont-simple-smile"></i>
-                    <span class="count-size"> 65</span>
-                    <p class="count-body"><b>Happy Clients</b> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <i class="count-size txt-blue-md icofont-clock-time"></i>
-                    <span class="count-size">12</span>
-                    <p class="count-body"><b>Years of experience</b> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
-                  </div>
-                </div>
-              </div>
+          <div class="sub-title-line font-main sub-format">
+            <p></p> <!-- can add a sub-line-->
           </div>
-          <div class="about-right font-main">
-            <div class="">
-              <p class="btn-learn">
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <a href="about.html" class="font-raleway font-bold txt-blue-lt btn-start">Learn More</a>
+        </div>
+        <div class="about-left font-main">   <!-- About Page left side of Body-->
+          <div>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.</p>
+            <div class="check-imglist">
+                <p><img src="images/check-img.png" class="check-img" alt="-"> Ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p><img src="images/check-img.png" class="check-img" alt="-"> Duis aute irure dolor in reprehenderit in voluptate velit</p>
+                <p><img src="images/check-img.png" class="check-img" alt="-"> Ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
-            <div class="count-box-right">
+          </div>
+          <div class="count-box-left ">
               <div>
                 <div>
-                  <i class="count-size txt-blue-md icofont-document-folder"></i>
-                  <span class="count-size">85</span>
-                  <p class="count-body"><b>Projects</b> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
+                  <i class="count-size txt-blue-md icofont-simple-smile"></i>
+                  <span class="count-size"> 65</span>
+                  <p class="count-body"><b>Happy Clients</b> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
                 </div>
               </div>
               <div>
                 <div>
-                  <i class="count-size txt-blue-md icofont-award"></i>
-                  <span class="count-size">15</span>
-                  <p class="count-body"><b>Awards</b> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
+                  <i class="count-size txt-blue-md icofont-clock-time"></i>
+                  <span class="count-size">12</span>
+                  <p class="count-body"><b>Years of experience</b> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
                 </div>
               </div>
-            </div>
+          </div>  <!-- count box end -->
+        </div>  <!-- Page Left end -->
+        <div class="about-right font-main">  <!-- About Page Right side of Body-->
+          <div>
+            <p class="btn-learn">
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <a href="about.html" class="font-raleway font-bold txt-blue-lt btn-start">Learn More</a>
           </div>
-      </div>
-  </body>
+          <div class="count-box-right">
+            <div>
+              <div>
+                <i class="count-size txt-blue-md icofont-document-folder"></i>
+                <span class="count-size">85</span>
+                <p class="count-body"><b>Projects</b> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <i class="count-size txt-blue-md icofont-award"></i>
+                <span class="count-size">15</span>
+                <p class="count-body"><b>Awards</b> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
+              </div>
+            </div>
+          </div>  <!-- count box end -->
+        </div>  <!-- Page Right end -->
+      </div>  <!-- Container end -->
+      <script type="text/javascript" src="script.js"></script>
+  </body>  <!-- Page End -->
 </html>

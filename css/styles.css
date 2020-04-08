@@ -1,8 +1,7 @@
 /* - All Site */
 * {                      /* CSS Reset */
-	padding: 0;
-	margin: 1%;
-	border: 0;
+	padding: 0px;
+	margin: 0px;
 	}
 
 a:hover {
@@ -62,43 +61,99 @@ a {
 .container {
     display:grid;
     grid-template-columns: repeat(6, 1fr);
-    align-content: center;
 }
 
 /* - Nav Menu settings and controls */
-.nav-box {
+.navbar-all {
     display: flex;
+    position: relative;
     justify-content: flex-start;
-    align-items: center;
-    width: 100%;
+    align-self: center;
     grid-column: 1/7;
     grid-row: 1;
-    margin-left: 10%;
+    margin-top: 50px;
+    margin-left: 75px;
 }
 
-h1.logo-text {
-    letter-spacing: 1px;
-    font-size: 2rem;
-    padding-top: 50px;
+.hamburger-btn {
+    display: none;
 }
 
-.nav-menu, .nav-menu * {
-    grid-column: 2/7;
-    align-content:flex-end;
+.sidenav {                  /* small vertical nav bar settings */
+    grid-column: 1;
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding-left: 10px;
+    height: 300px;
+    width: 110px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px 0 #5faee3;
+    border-radius: 5px;
+    z-index: 99;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+
+.sidenav * {
     list-style: none;
 }
 
-.nav-menu > ul > li {
+.show-sidenav {
+    display: block;
+}
+
+.logo-text {              /* logo position & settings in Nav Bar */
+    grid-column: 1/2;
+    margin-left: 30px;
+}
+
+.logo-text h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.nav-menu {               /* Menu options position in Nav Bar */
+    grid-column: 2/6;
+    justify-self: center;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.nav-menu * {
+  list-style: none;
+}
+
+.get-start-btn {           /* Get Started position in Nav Bar */
+    grid-column: 6/7;
+    margin-top: 12px;
+    margin-left: 50px;
+}
+
+.get-start-btn a {
+  background: #3498db;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 25px;
+}
+
+.get-start-btn a:hover {
+  background: #57aae1;
+  color: #fff;
+}
+
+.nav-menu > ul > li {      /* Get Started in Nav Bar */
   position: relative;
   white-space: nowrap;
   float: left;
-  margin: 0;
 }
 
-.nav-menu a {
+.nav-menu a {            /* Nav Bar decorations and settings */
   color: #555555;
-  padding: 5px 0 5px 30px;
   font-size: 1rem;
+  padding-left: 30px;
 }
 
 .nav-menu .menu ul {
@@ -107,18 +162,17 @@ h1.logo-text {
   visibility: hidden;
   opacity: 0;
   z-index: 99;
-  left: 25px;
+  left: 50px;
   padding: 5px 0;
   background: #fff;
   box-shadow: 2px 0 5px 0 #5faee3;
-  transition-delay: .2s;
   border-radius: 5px;
 }
 
 .nav-menu .menu li {
   min-width: 100px;
   position: relative;
-  margin: 12px 0;            /* vertical dropdown menu spacing */
+  margin: 10px 0;           /* vertical dropdown menu spacing */
 }
 
 .nav-menu .menu:hover > ul {
@@ -130,26 +184,18 @@ h1.logo-text {
   text-decoration: none;
 }
 
+.nav-menu .inactive a {
+  font-style: italic;
+  text-decoration: none;
+}
+
 .nav-menu .menu ul a {      /* dropdown box & font adjustments */
   padding: 25px 25px;
   font-size: .9rem;
 }
 
 .nav-menu .menu ul a:hover, .nav-menu .menu ul .active > a, .nav-menu .menu ul li:hover > a {
-  color: #3498db;          /* show blue on hover and active page setting */
-}
-
-.nav-menu .start a {       /* Get Started in Nav Bar */
-  background: #3498db;
-  color: #fff;
-  border-radius: 50px;
-  margin: 0 0 0 50%;
-  padding: 10px 25px;
-}
-
-.nav-menu .start a:hover {
-  background: #57aae1;
-  color: #fff;
+  color: #3498db;           /* show blue on hover and active page setting */
 }
 
 /* Main Page body styling*/
@@ -158,6 +204,7 @@ h1.logo-text {
   align-items: center;
   grid-column: 1/7;
   grid-row: 2/4;
+  margin-top: 50px
 }
 
 .index-left {
@@ -192,8 +239,8 @@ h1.index-title {
 }
 
 .index-img {
-  justify-content: flex-end;
-  grid-column: 4;
+  align-content: center;
+  grid-column: 4/7;
   grid-row: 2;
   margin-left: 5%;
   margin-right: 5%;
@@ -214,7 +261,7 @@ h1.index-title {
   width: 100%;
   background-color: #F3F9FD;
   padding: 15px 0;         /* Thickness of the bar background */
-  margin-top: 25px;        /* pushed down from body */
+  margin-top: 50px;        /* pushed down from body */
 }
 
 .bar-img img:hover {
@@ -225,48 +272,58 @@ h1.index-title {
 /* Places pictures in grid and sets to monochrome */
 .img-sp1 {
   grid-column: 1;
+  grid-row: 4;
   max-width: 45%;
   filter: grayscale(100);
 }
 
 .img-sp2 {
   grid-column: 2;
+  grid-row: 4;
   max-width: 45%;
   filter: grayscale(100);
 }
 
 .img-sp3 {
   grid-column: 3;
+  grid-row: 4;
   max-width: 45%;
   filter: grayscale(100);
 }
 
 .img-sp4 {
   grid-column: 4;
+  grid-row: 4;
   max-width: 45%;
   filter: grayscale(100);
 }
 
 .img-sp5 {
   grid-column: 5;
+  grid-row: 4;
   max-width: 45%;
   filter: grayscale(100);
 }
 
 .img-sp6 {
   grid-column: 6;
+  grid-row: 4;
   max-width: 45%;
   filter: grayscale(100);
 }
 
 /* About Us page styling*/
+.page-body {
+  grid-column: 1/7;
+}
+
 .title-line {
+  grid-row: 2;
   display: flex;
   justify-content: center;
   text-align: center;
-  max-width: 100%;
-  grid-column: 1/7;
-  grid-row: 2;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .title-line h2 {
@@ -285,16 +342,14 @@ h1.index-title {
 
 .about-left {      /* left side settings */
   grid-column: 1/4;
-  grid-row: 3/4;
-  align: vertical;
-  margin: 3% 0 0 15%;
+  grid-row: 3;
   max-width: 80%;
+  margin: 3% 0 0 15%;
 }
 
 .about-right {      /* Right side settings */
   grid-column: 4/7;
-  grid-row: 3/4;
-  align: vertical;
+  grid-row: 3;
   margin: 3% 15% 0 0;
   max-width: 80%;
 }
@@ -311,12 +366,12 @@ h1.index-title {
 /* Count section */
 .count-body {
   margin-bottom:25px;  /* row spacing in count area */
-  max-width: 85%
+  max-width: 80%
 }
 
 .count-box-left {
 grid-row: 5/6;
-margin-top: 10%;
+margin-top: 20%;
 }
 
 .count-box-right {
@@ -337,11 +392,11 @@ margin-top: 10%;
 }
 
 /* Services page styling*/
+
 .service-page {
   display:inline-flex;
   max-width: 100%;
   grid-column: 1/7;
-  grid-gap: 1%;
   margin: 5% 5%;
 }
 
@@ -452,7 +507,7 @@ margin-top: 10%;
 .feature-boxes {
   grid-template-columns: (4, 1fr);
   margin-right: 4%;       /* spacing between boxes */
-  width: 100%;
+  width: 88%;
 }
 
 .ft-icons {
@@ -465,7 +520,7 @@ margin-top: 10%;
   justify-content: flex-start;
   align-items: center;
   background: #f6f6f6;
-  height: 20%;          /* height of feature boxes */
+  height: 25%;          /* height of feature boxes */
 }
 
 .feature-boxes .ft-icons i {  /* icon size settings */
@@ -478,7 +533,7 @@ margin-top: 10%;
   font-size: 1rem;
   font-weight: 800;
   line-height: 1;
-  width: 80%;
+  width: 50%;
   margin: 0;
   padding: 0;
 }

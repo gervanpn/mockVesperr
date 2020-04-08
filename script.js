@@ -1,14 +1,17 @@
 //"use strict";
 
-window.onload = showAlert;
+let isSidenavOpen = false;
 
-function contactUs() {
-  let answer = confirm("Are you sure you want to contact us?");
+function openSidenav() {
+  if(!isSidenavOpen) {
+    document.getElementById("sidenav").classList.toggle("show-sidenav");
+    isSidenavOpen = true;
+  }
+}
 
-  if(answer) {
-      alert("You said Yes");
-  } else {
-      alert("You said No");
-    }
-
+function closeSidenav() {
+  if(isSidenavOpen) {
+    document.getElementById("sidenav").classList.toggle("show-sidenav");
+    isSidenavOpen = false;
+  }
 }
